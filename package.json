@@ -1,54 +1,36 @@
 {
-  "name": "learn-english",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.15.0",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "path": "^0.12.7",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-redux": "^7.2.6",
-    "react-router": "^6.0.2",
-    "react-router-dom": "^6.0.2",
-    "react-scripts": "^3.4.4",
-    "redux": "^4.1.2",
-    "redux-devtools-extension": "^2.13.9",
-    "redux-thunk": "^2.4.0",
-    "sass": "^1.43.4",
-    "web-vitals": "^1.1.2"
-  },
+  "name": "learn-english-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "server": "node server.js",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "lint": "eslint ./src",
-    "lint:fix": "eslint ./src --fix"
+    "start": "node index.js",
+    "dev": "run-p  server-dev start-front",
+    "start-front": "npm start --prefix client",
+    "server-dev": "nodemon index.js",
+    "build": "npm i --prefix client && npm run build --prefix client && npm i"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeoSame/learn-english.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeoSame/learn-english/issues"
+  },
+  "homepage": "https://github.com/LeoSame/learn-english#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "config": "^3.3.7",
+    "express": "^4.17.3",
+    "express-validator": "^6.14.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.9",
+    "npm-run-all": "^4.1.5",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "prettier": "^2.4.1"
+    "nodemon": "^2.0.15"
   }
 }
