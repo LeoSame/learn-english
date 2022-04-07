@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { Button } from '@material-ui/core';
 
 const Trainer = ({ words }) => {
   let numWordStor = localStorage.getItem('numWord');
@@ -36,19 +37,19 @@ const Trainer = ({ words }) => {
   return (
     <div className='App'>
       <div className='wordContainer'>
-        <button className='pre toggle' onClick={prev}>
+        <Button variant='contained' className='pre toggle' onClick={prev}>
           pre
-        </button>
+        </Button>
         <div className='word'>
           <div className='wordString'>{!open ? word.ua : word.eng}</div>
         </div>
-        <button className='next toggle' onClick={next}>
+        <Button variant='contained' className='next toggle' onClick={next}>
           next
-        </button>
+        </Button>
       </div>
-      <button className='open' onClick={() => setOpen(!open)}>
+      <Button variant='contained' className='open' onClick={() => setOpen(!open)}>
         open
-      </button>
+      </Button>
     </div>
   );
 };

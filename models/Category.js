@@ -1,8 +1,9 @@
 const { Schema, model, ObjectId } = require('mongoose');
 
-const Category = new Shema({
+const Category = new Schema({
   name: { type: String, require: true },
-  lastName: { type: String },
+  level: { type: String, default: 'easy' },
+  image: { type: String },
   words: [{ type: ObjectId, ref: 'Word' }],
 });
 
